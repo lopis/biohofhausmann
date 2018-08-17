@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #696969; }
+
+.header {
+  height: 300px;
+  margin-top: 100px;
+  background: url(419749972a4fe21e6ecbb98b24528ad0.jpg) no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .header .logo {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background: url(956c27b5de91c599836b58dffafc1a4a.jpg) white no-repeat;
+    background-position: 2% center;
+    background-size: auto 80%; }
+
+/* menu */
+.menu {
+  position: absolute; }
+  .menu ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2; }
+  .menu a {
+    color: #696969;
+    text-decoration: none;
+    font-weight: bold; }
+
+/* body */
+.content {
+  min-height: calc(100vh - 300px - 100px - 100px); }
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 100px; }
+  .footer div, .footer address {
+    margin: 0 15px 5px 15px; }
+
+.footer_oeko {
+  height: 80px;
+  width: 104px;
+  background: url(583a6e14506e5b92ea1870d03a4b76dc.jpg) no-repeat;
+  background-size: contain;
+  background-position: center; }
+
+.footer_gaea {
+  height: 80px;
+  width: 104px;
+  background: url(a94c25a3daa146a6c9d1746af8f9f8ab.jpg) no-repeat;
+  background-size: contain;
+  background-position: center; }
+

@@ -1,0 +1,77 @@
+$gray: #696969;
+$gray_light: #96918e;
+$purple: #253879;
+$purple_light: #4764c7;
+$green: #209648;
+$green_light: #86c543;
+
+html, body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: $gray;
+}
+
+$header_image_height: 300px;
+$header_logo_height: 100px;
+$footer_height: 100px;
+
+.header {
+  height: $header_image_height;
+  margin-top: $header_logo_height;
+  background: url("../img/header.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  .logo {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background: url("../img/logo.jpg") white no-repeat;
+    background-position: 2% center;
+    background-size: auto 80%;
+  }
+}
+
+/* menu */
+.menu {
+  position: absolute;
+  ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2;
+  }
+  a {
+    color: $gray;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+/* body */
+.content {
+  min-height: calc(100vh - #{$header_image_height} - #{$header_logo_height} - #{$footer_height});
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  height: $footer_height;
+  div, address {
+    margin: 0 15px 5px 15px;
+  }
+}
+.footer_oeko {
+  height: 80px;
+  width: 104px;
+  background: url("../img/logo_oeko.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.footer_gaea {
+  height: 80px;
+  width: 104px;
+  background: url("../img/logo_gaea.jpg") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
