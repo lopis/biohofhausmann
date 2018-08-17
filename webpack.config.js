@@ -12,7 +12,7 @@ const pages = fs.readdirSync('./src/pages/')
 
 const getHtmlPluginConfig = (pageName, lang) => {
   return new HtmlWebpackPlugin({
-    filename: `${pageName.replace(/\.[^/.]+$/, "")}.html`,
+    filename: `${pageName.replace(/\.[^/.]+$/, "")}_${lang}.html`,
     templateParameters: {
       username: 'test',
       lang: lang,
@@ -23,8 +23,10 @@ const getHtmlPluginConfig = (pageName, lang) => {
 }
 
 const htmlPagesConfig = pages.map(page => {
-  return getHtmlPluginConfig(page)
-})
+  return getHtmlPluginConfig(page, 'de')
+}).concat(pages.map(page => {
+  return getHtmlPluginConfig(page, 'en')
+}))
 
 module.exports = {
   entry: path.join(__dirname, 'src/app.js'),
@@ -37,7 +39,8 @@ module.exports = {
       {
         include: path.join(__dirname, 'src'),
         test: /\.handlebars$/,
-        loader: 'handlebars-loader'
+        loader: 'handlebars-loader',
+        query: { inlineRequires: '/img/' }
       },
       {
         test: /\.scss$/,
@@ -52,11 +55,26 @@ module.exports = {
         use: [
           'file-loader',
         ],
+      },
+      {
+        test: /\.(html)$/i,
+        use: [
+          'html-loader',
+        ],
       }
     ]
 	},
   plugins: [
     ...htmlPagesConfig,
+    new HtmlWebpackPlugin({
+      filename: `index.html`,
+      templateParameters: {
+        username: 'test',
+        lang: 'de',
+        ...content['de'],
+      },
+      template: path.join(__dirname, `src/index.handlebars`)
+    }),
     new MiniCssExtractPlugin({
       path: path.join(__dirname, 'dist'),
       filename: "[name].css",

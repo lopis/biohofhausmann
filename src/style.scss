@@ -5,51 +5,84 @@ $purple_light: #4764c7;
 $green: #209648;
 $green_light: #86c543;
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
 html, body {
   margin: 0;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Lato", sans-serif;
   color: $gray;
+  font-size: 20px;
 }
 
-$header_image_height: 300px;
+$header_image_height: 50vh;
 $header_logo_height: 100px;
 $footer_height: 100px;
 
 .header {
   height: $header_image_height;
-  margin-top: $header_logo_height;
-  background: url("../img/header.jpg") no-repeat;
+  background: url("../img/background.jpg") no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
+  &.sticky {
+    position: fixed;
+    top: calc(-50vh + 100px);
+    width: 100%;
+    & + .body {
+      margin-top: 50vh;
+    }
+  }
   .logo {
     position: fixed;
     top: 0;
-    height: 100px;
+    height: $header_logo_height;
     width: 100%;
     background: url("../img/logo.jpg") white no-repeat;
     background-position: 2% center;
     background-size: auto 80%;
+    opacity: 0.8;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
 /* menu */
 .menu {
-  position: absolute;
+  padding: 40px;
   ul {
     list-style: none;
     font-size: 18px;
     line-height: 2;
+    display: flex;
   }
   a {
-    color: $gray;
+    color: $purple;
+    text-shadow: 0px 0px $gray;
     text-decoration: none;
     font-weight: bold;
+    font-size: 80%;
+    margin: 10px 5px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    display: inline-block;
+    transition: background 75ms ease-in-out, color 75ms ease-in-out;
+    &.order-online {
+      color: white;
+      background: $purple;
+    }
+    &:hover {
+      color: white;
+      background: $green;
+      text-shadow: 0px 0px white;
+    }
   }
 }
 
 /* body */
 .content {
-  min-height: calc(100vh - #{$header_image_height} - #{$header_logo_height} - #{$footer_height});
+  min-height: calc(100vh - #{$header_image_height} - #{$footer_height});
+  padding: 50px;
+  text-align: center;
 }
 
 /* footer */
@@ -57,6 +90,7 @@ $footer_height: 100px;
   display: flex;
   justify-content: center;
   height: $footer_height;
+  margin: 50px 5px 20px 5px;
   div, address {
     margin: 0 15px 5px 15px;
   }

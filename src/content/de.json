@@ -1,9 +1,21 @@
 {
-  "menu_about": "About the biohof",
-  "menu_potatoes": "Our potatoes",
-  "menu_order": "Order online",
-  "menu_history": "History",
-  "menu_wwoff": "Praktikum and WOOF",
-  "menu_contact": "Contact",
-  "menu_links": "Links and partners"
+  "menu_about": "Über den Hofladen",
+  "menu_potatoes": "Unser Kartoffeln",
+  "menu_order": "Online Bestellen",
+  "menu_history": "Cronik",
+  "menu_wwoff": "Praktikum und WOOF",
+  "menu_contact": "Kontakt",
+  "menu_links": "Links und Partner",
+
+  "contact": "Kontakt",
+  "bio_jana": "Als gelernte Verkäuferin habe ich mich in den letzten Jahren mehr und mehr mit ökologischer Landwirtschaft beschäftigt. Dabei ist es mir besonders wichtig, natürliche Gleichgewichte zu erhalten und zu fördern sowie mit dem Anbau und der Vermarktung natürliche Ressourcen und die Umwelt zu schonen.",
+  "bio_daniel": "Seit 2012 studiere ich Ökolandbau und Vermarktung an der Hochschule für nachhaltige Entwicklung in Eberswalde und im selben Jahr habe ich den Hof übernommen. Seit 2015 wird auch Gemüse angebaut und über Foodassembly Chemnitz verkauft. \n Im kommenden Frühjahr werde ich das Studium beendet haben und mich voll dem Betrieb widmen: Hier möchte ich gesundes, nachhaltig produziertes Gemüse anbauen und verkaufen. \n Dabei ist es mir besonders wichtig, möglichst viele Menschen mit einzubeziehen und das was ich mache nach außen zu kommunizieren.",
+
+  "with_care_and_love": "Mit Sorgfalt und Liebe",
+  "from_farm_to_plate": "vom Anbau bis zum Teller…",
+  "easy_to_say_but": "leicht gesagt, aber was steckt dahinter?",
+  "potatoes_part_1": "Die Geschichte unserer Kartoffeln beginnt schon ein Jahr vor der Ernte. \n Indem Wir Kleegras anbauen und daraus Kompost herstellen bereiten wir die Grundlage der nächsten Ernte, erhöhen die  Bodenfruchtbarkeit, stellen Nährstoffe bereit und aktivieren das Bodenleben.",
+  "potatoes_part_2": "Bereits im Herbst werden Pflanzkartoffeln aussortiert und getrennt gelagert. Außerdem werden weitere Pflanzkartoffeln dazu bestellt: Das sind kontrollierte, auf die Freiheit von Krakheitserregern geprüfte, Kartoffeln. Bis spätestens Dezember müssen wir unds also für Sorte und Menge entschieden haben.",
+  "potatoes_part_3": "Ende März legen wir die Kartoffeln dann in Vorkeimkisten und stellen sie an einen hellen, milden Ort. So entstehen schon erste Triebe und die Kartoffel wächst schneller.",
+  "potatoes_part_4": "Zeitgleich wird das Kleegras umgepflügt, und der Boden bearbeitet, bis er feinkrümelig ist."
 }
