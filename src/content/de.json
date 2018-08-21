@@ -1,21 +1,30 @@
 {
-  "menu_about": "Über den Hofladen",
-  "menu_potatoes": "Unser Kartoffeln",
-  "menu_order": "Online Bestellen",
-  "menu_history": "Cronik",
-  "menu_wwoff": "Praktikum und WOOF",
-  "menu_contact": "Kontakt",
-  "menu_links": "Links und Partner",
-
-  "contact": "Kontakt",
-  "bio_jana": "Als gelernte Verkäuferin habe ich mich in den letzten Jahren mehr und mehr mit ökologischer Landwirtschaft beschäftigt. Dabei ist es mir besonders wichtig, natürliche Gleichgewichte zu erhalten und zu fördern sowie mit dem Anbau und der Vermarktung natürliche Ressourcen und die Umwelt zu schonen.",
+  "bio_contact": "Kontakt",
   "bio_daniel": "Seit 2012 studiere ich Ökolandbau und Vermarktung an der Hochschule für nachhaltige Entwicklung in Eberswalde und im selben Jahr habe ich den Hof übernommen. Seit 2015 wird auch Gemüse angebaut und über Foodassembly Chemnitz verkauft. \n Im kommenden Frühjahr werde ich das Studium beendet haben und mich voll dem Betrieb widmen: Hier möchte ich gesundes, nachhaltig produziertes Gemüse anbauen und verkaufen. \n Dabei ist es mir besonders wichtig, möglichst viele Menschen mit einzubeziehen und das was ich mache nach außen zu kommunizieren.",
+  "bio_jana": "Als gelernte Verkäuferin habe ich mich in den letzten Jahren mehr und mehr mit ökologischer Landwirtschaft beschäftigt. Dabei ist es mir besonders wichtig, natürliche Gleichgewichte zu erhalten und zu fördern sowie mit dem Anbau und der Vermarktung natürliche Ressourcen und die Umwelt zu schonen.",
 
-  "with_care_and_love": "Mit Sorgfalt und Liebe",
-  "from_farm_to_plate": "vom Anbau bis zum Teller…",
-  "easy_to_say_but": "leicht gesagt, aber was steckt dahinter?",
+  "learn_more": "Learn more",
+
+  "menu_about": "Über den Hofladen",
+  "menu_contact": "Kontakt",
+  "menu_history": "Cronik",
+  "menu_links": "Links und Partner",
+  "menu_order_online": "Online Bestellen",
+  "menu_potatoes": "Unser Kartoffeln",
+  "menu_wwoff": "Praktikum und WOOF",
+
+  "potatoes_easy_to_say_but": "leicht gesagt, aber was steckt dahinter?",
+  "potatoes_from_farm_to_plate": "vom Anbau bis zum Teller…",
   "potatoes_part_1": "Die Geschichte unserer Kartoffeln beginnt schon ein Jahr vor der Ernte. \n Indem Wir Kleegras anbauen und daraus Kompost herstellen bereiten wir die Grundlage der nächsten Ernte, erhöhen die  Bodenfruchtbarkeit, stellen Nährstoffe bereit und aktivieren das Bodenleben.",
   "potatoes_part_2": "Bereits im Herbst werden Pflanzkartoffeln aussortiert und getrennt gelagert. Außerdem werden weitere Pflanzkartoffeln dazu bestellt: Das sind kontrollierte, auf die Freiheit von Krakheitserregern geprüfte, Kartoffeln. Bis spätestens Dezember müssen wir unds also für Sorte und Menge entschieden haben.",
   "potatoes_part_3": "Ende März legen wir die Kartoffeln dann in Vorkeimkisten und stellen sie an einen hellen, milden Ort. So entstehen schon erste Triebe und die Kartoffel wächst schneller.",
-  "potatoes_part_4": "Zeitgleich wird das Kleegras umgepflügt, und der Boden bearbeitet, bis er feinkrümelig ist."
+  "potatoes_part_4": "Zeitgleich wird das Kleegras umgepflügt, und der Boden bearbeitet, bis er feinkrümelig ist.",
+  "potatoes_with_care_and_love": "Mit Sorgfalt und Liebe",
+
+  "products_box_delivery": "Box delivery",
+  "products_intro": "Our vegetables are grown with love and care and without anyhelp from pesticides, herbicides. We also consiously abstain from the help of fertilizers based on animal products. Do you want to learn more about how we grow our vegetables, how we compost ou fertrilizer, and how we perform the rituals to sacrifice 7 virgins to the gods for good yields?",
+  "products_potato_box": "Kartoffeln Kisten",
+  "products_veggie_box": "Gemüse Kisten",
+  "products_plus_delivery_fee": "Plus 3€ delivery fee; delivery in Leipzig city area",
+  "products_plus_shipping_fee": "Plus 4,90€ shipping"
 }
