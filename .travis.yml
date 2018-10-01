@@ -1,4 +1,4 @@
-language: ruby
+language: javascript
 after_success:
   - yarn install
   - yarn build
