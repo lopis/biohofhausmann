@@ -1,4 +1,4 @@
-language: javascript
+language: nodejs
 after_success:
   - yarn install
   - yarn build
