@@ -1,5 +1,7 @@
 # biohausmann website
 
+[![Build Status](https://travis-ci.org/lopis/biohofhausmann.svg?branch=master)](https://travis-ci.org/lopis/biohofhausmann)
+
 ## Installing
 
 Node and npm/yarn should be installed in the system.
