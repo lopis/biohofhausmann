@@ -2,7 +2,11 @@ language: node_js
 after_success:
   - yarn install
   - yarn build
-  - git add .
-  - git commit -m "New release"
-  - git remote add deploy https://github.com/lopis/biohofhausmann.git
-  - git push deploy
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep-history: true
+  local-dir: dir
+  on:
+    branch: master
