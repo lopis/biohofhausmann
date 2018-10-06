@@ -14,14 +14,6 @@ window.addEventListener('scroll', function(e) {
   const vh = Math.max(
     document.documentElement.clientHeight,
     window.innerHeight || 0)
-
-  const logoHeight = _('.logo').clientHeight
-
-  if (window.scrollY > (0.5 * vh - logoHeight)) {
-    _('.header').classList.add('sticky')
-  } else {
-    _('.header').classList.remove('sticky')
-  }
 });
 
 on('.menu-button', 'click', () => {

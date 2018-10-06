@@ -21,31 +21,18 @@ $header_image_height: 50vh;
 $header_logo_height: 100px;
 $footer_height: 100px;
 
-.header {
-  height: $header_image_height;
-  background: url("../../img/background.jpg") no-repeat;
-  background-size: cover;
-  background-position: center top;
-  &.sticky {
-    position: fixed;
-    top: calc(-50vh + 100px);
-    width: 100%;
-    & + .body {
-      margin-top: 50vh;
-    }
-  }
-  .logo {
-    position: fixed;
-    top: 0;
-    height: $header_logo_height;
-    width: 100%;
-    background: url("../../img/logo.jpg") rgba(255,255,255,0.8) no-repeat;
-    background-position: 2% center;
-    background-size: auto 80%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+.logo {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: $header_logo_height;
+  width: 100%;
+  background: url("../../img/logo.jpg") white no-repeat;
+  background-position: 2% center;
+  background-size: auto 80%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /* menu */
@@ -87,9 +74,13 @@ $footer_height: 100px;
 /* body */
 .content {
   min-height: calc(100vh - #{$header_image_height} - #{$footer_height});
-  padding: 50px;
   text-align: center;
-  max-width: 1200px;
+}
+
+section {
+  padding: 50px 25px;
+  position: relative;
+  margin-bottom: 100px;
 }
 
 small {
@@ -132,17 +123,15 @@ small {
 }
 
 @media (max-width: 980px) {
-  .header {
-    .logo {
-      height: 70px;
-    }
-    &.sticky {
-      position: fixed;
-      top: calc(-50vh + 100px);
-      width: 100%;
-      & + .body {
-        margin-top: 50vh;
-      }
+  .logo {
+    height: 70px;
+  }
+  &.sticky {
+    position: fixed;
+    top: calc(-50vh + 100px);
+    width: 100%;
+    & + .body {
+      margin-top: 50vh;
     }
   }
   .menu {
@@ -198,4 +187,12 @@ small {
       transition: opacity $transitionSpeed, transform 0s;
     }
   }
+}
+
+
+.landing-page {
+  height: 100vh;
+  background: url("../../img/background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
