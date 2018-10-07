@@ -89,13 +89,13 @@ gulp.task('sass', function () {
 })
 
 gulp.task('default', gulp.series([
+  'clean',
   getTasks(),
   'merge',
   'build',
   'build-js',
   'assets',
   'sass',
-  'clean',
   done => done()
 ]));
 
