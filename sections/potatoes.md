@@ -1,4 +1,8 @@
-![Alt text](veggie_box.png)
+|menu title:        |
+|-------------------|
+|Kartoffel Bestellen|
+
+![A huge pile of potatoes](potato_pile.jpg)
 
 ## Kartoffel Bestellen
 

@@ -1,4 +1,8 @@
-![Alt text](veggie_box.png)
+|menu title:        |
+|-------------------|
+|Unserer Kartoffeln |
+
+![Colorful Potatoes](color_potatoes.jpg)
 
 ## Unserer Kartoffeln
 
