@@ -1,7 +1,8 @@
 {
   "scripts": {
     "build-dev": "gulp dev",
-    "build": "gulp"
+    "build": "gulp",
+    "test": "echo 'No tests found'"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
