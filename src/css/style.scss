@@ -1,31 +1,91 @@
-$gray: #696969;
-$gray_light: #96918e;
-$purple: #253879;
-$purple_light: #4764c7;
-$green: #209648;
-$green_light: #86c543;
-
-$transitionSpeed: 200ms;
-
 @import 'layout';
-@import url('https://fonts.googleapis.com/css?family=Lato:300');
+@import 'defaults';
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
 
 html, body {
   margin: 0;
   font-family: "Lato", sans-serif;
-  color: $gray;
+  color: $black;
   font-size: 20px;
+  // overflow-x: hidden;
+  background: linear-gradient(#B4CF64, #65BF83);
+  background-attachment: fixed;
 }
 
-$header_image_height: 50vh;
-$header_logo_height: 100px;
-$footer_height: 100px;
+/* menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $menu_height;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: transparent;
+  z-index: 2;
+  transition: background-color $transitionSpeed*2;
+  &.sticky {
+    background-color: white;
+    box-shadow: 0 2px 10px -5px black;
+  }
+  ul {
+    list-style: none;
+    font-size: 18px;
+    line-height: 2;
+    display: flex;
+    a {
+      margin: 5px 15px;
+      font-weight: normal;
+    }
+  }
+  .overlay {
+    display: none;
+  }
+}
 
-.header {
-  height: $header_image_height;
-  background: url("../../img/background.jpg") no-repeat;
-  background-size: cover;
-  background-position: center top;
+.logo {
+  flex-grow: 1;
+  height: 80%;
+  margin-left: 2%;
+  img {
+    height: 200%;
+    transition: height 200ms ease-in-out;
+  }
+  .sticky & img {
+    height: 100%;
+  }
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  height: $footer_height;
+  padding: 100px 5px 20px 5px;
+  z-index: 1;
+  position: relative;
+  background: white;
+  margin-bottom: -200px;
+  mask: url("diagonal.svg") no-repeat;
+  mask-size: 100% 200%;
+  min-height: 200px;
+  div, address {
+    margin: 0 15px 5px 15px;
+  }
+  .footer_oeko, .footer_gaea {
+    height: 80px;
+  }
+}
+
+.menu-button, .close-button {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .logo {
+    height: 70%;
+  }
   &.sticky {
     position: fixed;
     top: calc(-50vh + 100px);
@@ -34,122 +94,11 @@ $footer_height: 100px;
       margin-top: 50vh;
     }
   }
-  .logo {
-    position: fixed;
-    top: 0;
-    height: $header_logo_height;
-    width: 100%;
-    background: url("../../img/logo.jpg") rgba(255,255,255,0.8) no-repeat;
-    background-position: 2% center;
-    background-size: auto 80%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-}
-
-/* menu */
-.menu {
-  padding: 40px;
-  ul {
-    list-style: none;
-    font-size: 18px;
-    line-height: 2;
-    display: flex;
-  }
-  .overlay {
-    display: none;
-  }
-}
-
-.link {
-  color: $purple;
-  text-shadow: 0px 0px $gray;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 80%;
-  margin: 10px 5px;
-  padding: 5px 10px;
-  border-radius: 50px;
-  display: inline-block;
-  transition: background 75ms ease-in-out, color 75ms ease-in-out;
-  &.order-online {
-    color: white;
-    background: $purple;
-  }
-  &:hover {
-    color: white;
-    background: $green;
-    text-shadow: 0px 0px white;
-  }
-}
-
-/* body */
-.content {
-  min-height: calc(100vh - #{$header_image_height} - #{$footer_height});
-  padding: 50px;
-  text-align: center;
-  max-width: 1200px;
-}
-
-small {
-  font-size: 70%;
-  line-height: 1;
-  display: inline-block;
-}
-
-.price-list {
-  margin-bottom: 15px;
-}
-
-/* footer */
-.footer {
-  display: flex;
-  justify-content: center;
-  height: $footer_height;
-  margin: 50px 5px 20px 5px;
-  div, address {
-    margin: 0 15px 5px 15px;
-  }
-}
-.footer_oeko {
-  height: 80px;
-  width: 104px;
-  background: url("../../img/logo_oeko.jpg") no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-.footer_gaea {
-  height: 80px;
-  width: 104px;
-  background: url("../../img/logo_gaea.jpg") no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
-.menu-button, .close-button {
-  display: none;
-}
-
-@media (max-width: 980px) {
-  .header {
-    .logo {
-      height: 70px;
-    }
-    &.sticky {
-      position: fixed;
-      top: calc(-50vh + 100px);
-      width: 100%;
-      & + .body {
-        margin-top: 50vh;
-      }
-    }
-  }
   .menu {
     padding: 0;
     .menu-button, .close-button {
       display: inline-block;
-      fill: $purple;
+      fill: $color-secondary;
       height: 24px;
       width: 24px;
       padding: 23px;
@@ -158,6 +107,7 @@ small {
       right: 0;
     }
     ul {
+      justify-content: right;
       position: fixed;
       top: 0;
       height: 100%;
@@ -196,6 +146,87 @@ small {
       transform: translateX(0%);
       opacity: 0.3;
       transition: opacity $transitionSpeed, transform 0s;
+    }
+  }
+}
+
+
+.landing-page {
+  height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 10px;
+  padding-bottom: 250px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-shadow: 0 0 2px black;
+  img {
+    height: 60px;
+    margin: 4px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -200px;
+}
+
+$inclide: 200px;
+section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background: white;
+  mask: url('diagonal.svg') no-repeat;
+  mask-size: 100% 100%;
+  &:nth-child(2n) {
+    z-index: 0;
+    mask: none;
+    padding: $inclide*0.75 0;
+    background: transparent;
+    margin-top: -210px;
+    margin-bottom: -210px;
+    &::before, &::after {
+      border: none;
+    }
+  }
+}
+
+section {
+  table {
+    display: none;
+  }
+  p, h2, h3 {
+    padding: 0 2vw;
+  }
+  h2 {
+    margin-top: 100px;
+  }
+  table + p {
+    width: 45%;
+    float: right;
+    padding: 0;
+    margin-left: 2vw;
+    max-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  img {
+    width: 100%;
+  }
+  &:nth-child(2n) {
+    table + p {
+      margin: 0;
+      margin-left: unset;
+      margin-right: 2vw;
+      float: left;
     }
   }
 }

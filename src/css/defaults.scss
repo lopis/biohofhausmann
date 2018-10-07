@@ -1,0 +1,37 @@
+$color-primary:        #209648;
+$color-primary-light:  #65BF83;
+$color-primary-medium: #3DA560;
+$color-primary-dark:   #005B1F;
+
+$color-secondary:      #1F6880;
+$color-secondary-light: #5A93A6;
+$color-secondary-dark:  #033B4E;
+
+$color-alt:       #7DBC28;
+$color-alt-light: #BCEB7C;
+$color-alt-dark:  #427200;
+
+$black: #333333;
+$gray: #999999;
+
+$transitionSpeed: 200ms;
+$footer_height: 100px;
+$menu_height: 100px;
+
+small {
+  font-size: 70%;
+  line-height: 1;
+  display: inline-block;
+}
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 75ms ease-in-out, color 75ms ease-in-out;
+}
+
+p {
+  text-indent: 2em;
+  text-align: justify;
+}
