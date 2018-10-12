@@ -185,9 +185,13 @@ section {
   background: white;
   mask: url('diagonal.svg') no-repeat;
   mask-size: 100% 100%;
+  -webkit-mask-image: url("diagonal.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
   &:nth-child(2n) {
     z-index: 0;
     mask: none;
+    -webkit-mask: none;
     padding: $inclide*0.75 0;
     background: transparent;
     margin-top: -210px;
